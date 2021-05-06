@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "dgSpecHash": "cQzLsaZjuN4VF9L1+YqBnGJ0t3dceVtZnqTztIjBR+OgRlKQBFiQ+PR4hZX1aYaSfnyB7KemDs89q/cB9byakQ==",
+  "success": false,
+  "projectFilePath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.iOS/BattleshipGame.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/xyz/.nuget/packages/autofac/6.2.0/autofac.6.2.0.nupkg.sha512",
+    "/Users/xyz/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
+    "/Users/xyz/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+    "/Users/xyz/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.0.0/microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "/Users/xyz/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "/Users/xyz/.nuget/packages/xamarin.forms/4.4.0.991640/xamarin.forms.4.4.0.991640.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project BattleshipGame.Android is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Project BattleshipGame.Android supports: monoandroid11.0 (MonoAndroid,Version=v11.0)",
+      "libraryId": "BattleshipGame.Android",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project BattleshipGame.Android is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Project BattleshipGame.Android supports: monoandroid11.0 (MonoAndroid,Version=v11.0)",
+      "libraryId": "BattleshipGame.Android",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project BattleshipGame.Android is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Project BattleshipGame.Android supports: monoandroid11.0 (MonoAndroid,Version=v11.0)",
+      "libraryId": "BattleshipGame.Android",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project BattleshipGame.Android is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Project BattleshipGame.Android supports: monoandroid11.0 (MonoAndroid,Version=v11.0)",
+      "libraryId": "BattleshipGame.Android",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

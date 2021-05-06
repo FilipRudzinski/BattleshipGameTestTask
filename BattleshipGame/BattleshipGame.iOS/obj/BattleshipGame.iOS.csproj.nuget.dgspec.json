@@ -1,0 +1,273 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.iOS/BattleshipGame.iOS.csproj": {}
+  },
+  "projects": {
+    "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/BattleshipGame.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/BattleshipGame.Application.csproj",
+        "projectName": "BattleshipGame.Application",
+        "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/BattleshipGame.Application.csproj",
+        "packagesPath": "/Users/xyz/.nuget/packages/",
+        "outputPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/xyz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2012, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj",
+        "projectName": "BattleshipGame.Domain",
+        "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj",
+        "packagesPath": "/Users/xyz/.nuget/packages/",
+        "outputPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/xyz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.4.0.991640, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.Android/BattleshipGame.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.Android/BattleshipGame.Android.csproj",
+        "projectName": "BattleshipGame.Android",
+        "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.Android/BattleshipGame.Android.csproj",
+        "packagesPath": "/Users/xyz/.nuget/packages/",
+        "outputPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.Android/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/xyz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid11.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid11.0": {
+            "projectReferences": {
+              "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/BattleshipGame.Application.csproj": {
+                "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/BattleshipGame.Application.csproj"
+              },
+              "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj": {
+                "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid11.0": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v4": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.AppCompat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.CardView": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.MediaRouter": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.4.0.991640, )"
+            }
+          }
+        }
+      }
+    },
+    "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.iOS/BattleshipGame.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.iOS/BattleshipGame.iOS.csproj",
+        "projectName": "BattleshipGame.iOS",
+        "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.iOS/BattleshipGame.iOS.csproj",
+        "packagesPath": "/Users/xyz/.nuget/packages/",
+        "outputPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.iOS/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/xyz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj": {
+                "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj"
+              },
+              "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.Android/BattleshipGame.Android.csproj": {
+                "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame/BattleshipGame.Android/BattleshipGame.Android.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.4.0.991640, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

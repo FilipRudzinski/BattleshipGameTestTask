@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{C9A528F0-8D25-44E3-854A-E9222EE9B90F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BattleshipGame/BattleshipGame.Android/View/Tile.xaml">
+    <Files>
+      <File FileName="BattleshipGame/BattleshipGame.Android/View/Tile.xaml" Line="1" Column="1" />
+      <File FileName="BattleshipGame/BattleshipGame.Android/View/GamePage.xaml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BattleshipGame" expanded="True" selected="True">
+            <Node name="BattleshipGame.Android" expanded="True">
+              <Node name="View" expanded="True" />
+            </Node>
+            <Node name="BattleshipGame.Application" expanded="True">
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+            <Node name="BattleshipGame.Domain" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BattleshipGame.Android PreferredExecutionTarget="Android.Pixel_XL_API_29" />
+</Properties>

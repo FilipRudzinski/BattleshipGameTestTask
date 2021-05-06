@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj": {}
+  },
+  "projects": {
+    "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj",
+        "projectName": "BattleshipGame.Domain",
+        "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj",
+        "packagesPath": "/Users/xyz/.nuget/packages/",
+        "outputPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/xyz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.4.0.991640, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

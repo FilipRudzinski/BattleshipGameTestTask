@@ -1,0 +1,10 @@
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/bin/Debug/netstandard2.0/BattleshipGame.Domain.deps.json
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/bin/Debug/netstandard2.0/BattleshipGame.Domain.dll
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/bin/Debug/netstandard2.0/BattleshipGame.Domain.pdb
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard2.0/BattleshipGame.Domain.csprojAssemblyReference.cache
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard2.0/BattleshipGame.Domain.AssemblyInfoInputs.cache
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard2.0/BattleshipGame.Domain.AssemblyInfo.cs
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard2.0/BattleshipGame.Domain.csproj.CoreCompileInputs.cache
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard2.0/BattleshipGame.Domain.dll
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard2.0/BattleshipGame.Domain.pdb

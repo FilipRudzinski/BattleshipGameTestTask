@@ -1,0 +1,9 @@
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/bin/Debug/netstandard2.0/BattleshipGame.Application.deps.json
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/bin/Debug/netstandard2.0/BattleshipGame.Application.dll
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/bin/Debug/netstandard2.0/BattleshipGame.Application.pdb
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.csprojAssemblyReference.cache
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.AssemblyInfoInputs.cache
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.AssemblyInfo.cs
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.csproj.CoreCompileInputs.cache
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.dll
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.pdb

@@ -1,0 +1,3 @@
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard1.3/BattleshipGame.Domain.csproj.CoreCompileInputs.cache
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard1.3/BattleshipGame.Domain.AssemblyInfoInputs.cache
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/obj/Debug/netstandard1.3/BattleshipGame.Domain.AssemblyInfo.cs
