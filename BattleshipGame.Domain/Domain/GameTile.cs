@@ -25,14 +25,38 @@ namespace BattleshipGame.Domain.Domain
             Coordinate = coordinate;
         }
 
+        public void Click()
+        {
+            if (IsShoot)
+            {
+                ClearShoot();
+            }
+            else
+            {
+                Shoot();
+            }
+        }
+
         public void Shoot()
         {
             IsShoot = true;
         }
 
+        public void ClearShoot()
+        {
+            IsShoot = false;
+        }
+
         public void AssignShip(Ship ship)
         {
             Ship = ship;
+            Ship.AssignTile(this);
+        }
+
+        public void Clear()
+        {
+            Ship = null;
+            IsShoot = false;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace BattleshipGame.Android
         public App()
         {
             InitializeComponent();
-            AppBootstrapper.Bootstrap();
+            MainBootstrapper.Bootstrap();
             MainPage = new GamePage();
         }
         

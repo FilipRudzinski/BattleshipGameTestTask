@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleshipGame.Domain", "Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleshipGame.Application", "BattleshipGame.Application\BattleshipGame.Application.csproj", "{4A22B1AC-26EB-4E85-AB47-F4DA96F7B30C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleshipGame.UnitTest", "BattleshipGame.UnitTest\BattleshipGame.UnitTest.csproj", "{5C948AC5-2905-4E20-97D6-47B7045F438A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -118,5 +120,21 @@ Global
 		{4A22B1AC-26EB-4E85-AB47-F4DA96F7B30C}.Release|iPhone.Build.0 = Release|Any CPU
 		{4A22B1AC-26EB-4E85-AB47-F4DA96F7B30C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{4A22B1AC-26EB-4E85-AB47-F4DA96F7B30C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Release|iPhone.Build.0 = Release|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{5C948AC5-2905-4E20-97D6-47B7045F438A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

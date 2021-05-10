@@ -7,3 +7,6 @@
 /Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.csproj.CoreCompileInputs.cache
 /Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.dll
 /Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.pdb
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/bin/Debug/netstandard2.0/BattleshipGame.Domain.dll
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/bin/Debug/netstandard2.0/BattleshipGame.Domain.pdb
+/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Application/obj/Debug/netstandard2.0/BattleshipGame.Application.csproj.CopyComplete

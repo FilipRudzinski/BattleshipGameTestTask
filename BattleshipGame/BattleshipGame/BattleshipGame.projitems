@@ -16,7 +16,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Bootstrap\AppBootstrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bootstrap\MainBootstrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bootstrap\ApplicationBootstrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bootstrap\DomainBootstrapper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

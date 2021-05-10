@@ -7,15 +7,19 @@ using MediatR.Pipeline;
 
 namespace BattleshipGame.Android.Bootstrap
 {
-    public class AppBootstrapper
+    public class MainBootstrapper
     {
         public static void Bootstrap()
         {
             var builder = App.GetBuilder();
             App.RegisterType<IMediator, Mediator>();
             App.RegisterType<BattleshipGameViewModel>();
+            App.RegisterType<BattleTileViewModel>();
 
             BuildMediator(builder);
+            
+            DomainBootstrapper.Bootstrap();
+            ApplicationBootstrapper.Bootstrap();
             
             App.BuildContainer();
         }

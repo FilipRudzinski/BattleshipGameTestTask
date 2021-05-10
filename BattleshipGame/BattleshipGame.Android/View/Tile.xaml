@@ -4,7 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="BattleshipGame.Android.View.Tile">
     <ContentView.Content >
-        <BoxView  Color="Navy" WidthRequest="20" HeightRequest="20">
-        </BoxView>
+        <Grid  WidthRequest="20" HeightRequest="20">
+            <!-- <BoxView  Color="Navy"> -->
+                                       <!--     -->
+                                       <!-- </BoxView> -->
+            <Button Width="20"  Command="{Binding ResetCommand}" ></Button>
+        </Grid>
     </ContentView.Content>
 </ContentView>

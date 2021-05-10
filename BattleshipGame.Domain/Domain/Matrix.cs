@@ -11,7 +11,7 @@ namespace BattleshipGame.Domain.Domain
 
         private List<GameTile> _gameTiles = new List<GameTile>();
         
-        public Matrix(int sizeX, int sizeY)
+        internal Matrix(int sizeX, int sizeY)
         {
             SizeX = sizeX;
             SizeY = sizeY;
@@ -29,25 +29,17 @@ namespace BattleshipGame.Domain.Domain
             }
         }
 
+        public void Clear()
+        {
+            _gameTiles.AsParallel().ForAll(x =>
+            {
+                x.Clear();
+            });
+        }
+
         public GameTile GetTile(Coordinate coordinate)
         {
             return _gameTiles.FirstOrDefault(x => x.Coordinate.X == SizeX && x.Coordinate.Y == SizeY);
-        }
-
-        public IEnumerable<GameTile> GetAbjectTiles(Coordinate coordinate)
-        {
-            var ret = new List<GameTile>();
-            
-            var adjects =coordinate.GetAdject();
-            adjects.ForEach(x =>
-            {
-                var tile = GetTile(x);
-                if (tile != null)
-                {
-                    ret.Add(tile);
-                }
-            });
-            return ret;
         }
     }
 }

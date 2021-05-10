@@ -163,6 +163,21 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "BattleshipGame.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Autofac": "6.2.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "Xamarin.Forms": "4.4.0.991640"
+        },
+        "compile": {
+          "bin/placeholder/BattleshipGame.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BattleshipGame.Domain.dll": {}
+        }
       }
     }
   },
@@ -802,11 +817,17 @@
         "xamarin.forms.5.0.0.2012.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "BattleshipGame.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BattleshipGame.Domain/BattleshipGame.Domain.csproj",
+      "msbuildProject": "../BattleshipGame.Domain/BattleshipGame.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Autofac >= 6.2.0",
+      "BattleshipGame.Domain >= 1.0.0",
       "MediatR >= 9.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 9.0.0",
       "NETStandard.Library >= 2.0.3",
@@ -840,7 +861,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj": {
+              "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

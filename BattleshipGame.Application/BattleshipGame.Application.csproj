@@ -10,4 +10,8 @@
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BattleshipGame.Domain\BattleshipGame.Domain.csproj" />
+    </ItemGroup>
 </Project>

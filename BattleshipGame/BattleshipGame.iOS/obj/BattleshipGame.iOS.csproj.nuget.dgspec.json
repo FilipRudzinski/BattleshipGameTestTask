@@ -27,7 +27,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj": {
+                "projectPath": "/Users/xyz/Desktop/Projects/BattleshipGame/BattleshipGame/BattleshipGame.Domain/BattleshipGame.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
