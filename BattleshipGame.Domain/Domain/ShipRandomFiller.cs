@@ -92,7 +92,7 @@ namespace BattleshipGame.Domain.Domain
             if (nextTile != null && !nextTile.IsShip)
             {
                 var adject = nextTile.Coordinate.GetAdject();
-                var isAdjectShip = adject.Select(x => matrix.GetTile(x)).Any(x => x.IsShip);
+                var isAdjectShip = adject.Select(x => matrix.GetTile(x)).Any(x => x?.IsShip == true);
                 if (!isAdjectShip) return nextCoord;
             }
             return null;

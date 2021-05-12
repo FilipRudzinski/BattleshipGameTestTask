@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:conventers="clr-namespace:BattleshipGame.Android.Conventers;assembly=BattleshipGame.Android"
              x:Class="BattleshipGame.Android.App">
     <Application.Resources>
 
+        <conventers:TileColorConverter x:Key="TileColorConverter" />
     </Application.Resources>
 </Application>

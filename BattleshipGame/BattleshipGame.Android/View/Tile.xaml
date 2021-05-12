@@ -5,10 +5,13 @@
     x:Class="BattleshipGame.Android.View.Tile">
     <ContentView.Content >
         <Grid  WidthRequest="20" HeightRequest="20">
-            <!-- <BoxView  Color="Navy"> -->
-                                       <!--     -->
-                                       <!-- </BoxView> -->
-            <Button Width="20"  Command="{Binding ResetCommand}" ></Button>
+            <BoxView  Color="{Binding State, Converter={StaticResource TileColorConverter}}">
+                                       
+            </BoxView>
+            <!-- <Button WidthRequest="20"  Command="{Binding ResetCommand}" ></Button> -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ClickCommand}"/>
+            </Grid.GestureRecognizers>
         </Grid>
     </ContentView.Content>
 </ContentView>

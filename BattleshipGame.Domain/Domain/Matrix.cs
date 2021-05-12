@@ -39,7 +39,7 @@ namespace BattleshipGame.Domain.Domain
 
         public GameTile GetTile(Coordinate coordinate)
         {
-            return _gameTiles.FirstOrDefault(x => x.Coordinate.X == SizeX && x.Coordinate.Y == SizeY);
+            return _gameTiles.FirstOrDefault(x => x.Coordinate.X == coordinate.X && x.Coordinate.Y == coordinate.Y);
         }
     }
 }

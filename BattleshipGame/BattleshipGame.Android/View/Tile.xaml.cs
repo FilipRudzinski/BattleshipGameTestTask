@@ -28,10 +28,8 @@ namespace BattleshipGame.Android.View
             get => _viewModel.MatrixType;
             set => _viewModel.MatrixType = value;
         }
-
         private BattleTileViewModel _viewModel;
-
-
+        
         public Tile()
         {
             InitializeComponent();

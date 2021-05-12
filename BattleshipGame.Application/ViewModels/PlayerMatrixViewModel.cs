@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -8,6 +9,7 @@ using Xamarin.Forms;
 
 namespace BattleshipGame.Application.ViewModels
 {
+    [Obsolete]
     public class PlayerMatrixViewModel : INotifyPropertyChanged
     {
         public MatrixTypeEnum MatrixType { get; }
