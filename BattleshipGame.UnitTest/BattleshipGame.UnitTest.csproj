@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{5C948AC5-2905-4E20-97D6-47B7045F438A}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <RootNamespace>BattleshipGame.UnitTest</RootNamespace>
+        <AssemblyName>BattleshipGame.UnitTest</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="NUnit" Version="2.6.4" />
+        <PackageReference Include="Xamarin.UITest" Version="2.2.4" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="AppTests.cs" />
+        <Compile Include="AppInitializer.cs" />
+        <Compile Include="Domain\BattleTests.cs" />
+        <Compile Include="Domain\GameTileTests.cs" />
+        <Compile Include="Domain\MatrixTests.cs" />
+        <Compile Include="Domain\ShipTest.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\BattleshipGame.Domain\BattleshipGame.Domain.csproj">
+        <Project>{57c7513d-c5be-4660-a048-33ffdc0fc27a}</Project>
+        <Name>BattleshipGame.Domain</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
