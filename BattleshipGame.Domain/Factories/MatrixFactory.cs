@@ -1,17 +1,19 @@
 using BattleshipGame.Domain.Domain;
+using BattleshipGame.Domain.Domain.Matrix;
 
 namespace BattleshipGame.Domain.Factories
 {
     public class MatrixFactory : IMatrixFactory
     {
-        public Matrix Create(int sizeX, int sizeY)
+        //TODO: Create interface IMatrix
+        public TileMatrix Create(int sizeX, int sizeY, OwnerTypeEnum ownerTypeEnum, ITileFactory tileFactory)
         {
-            return new Matrix(sizeX, sizeY);
+            return new TileMatrix(sizeX, sizeY, ownerTypeEnum, tileFactory);
         }
     }
 
     public interface IMatrixFactory
     {
-        Matrix Create(int sizeX, int sizeY);
+        TileMatrix Create(int sizeX, int sizeY, OwnerTypeEnum ownerTypeEnum, ITileFactory tileFactory);
     }
 }

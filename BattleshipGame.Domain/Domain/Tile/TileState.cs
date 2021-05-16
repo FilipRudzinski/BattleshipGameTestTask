@@ -1,9 +1,10 @@
-namespace BattleshipGame.Domain.Domain
+namespace BattleshipGame.Domain.Domain.Tile
 {
     public enum TileState
     {
         Empty,
         EmptyShoot,
-        ShootShip
+        ShootShip,
+        Ship
     }
 }

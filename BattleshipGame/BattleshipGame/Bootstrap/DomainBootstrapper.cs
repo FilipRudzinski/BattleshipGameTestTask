@@ -7,6 +7,7 @@ namespace BattleshipGame.Android.Bootstrap
         public static void Bootstrap()
         {
             App.RegisterType<IMatrixFactory, MatrixFactory>();
+            App.RegisterType<ITileFactory, TileFactory>();
         }
     }
 }

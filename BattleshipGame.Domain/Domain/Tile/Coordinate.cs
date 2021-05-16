@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BattleshipGame.Domain.Domain
+namespace BattleshipGame.Domain.Domain.Tile
 {
     public class Coordinate
     {

@@ -1,30 +1,34 @@
 using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms.Internals;
+using BattleshipGame.Domain.Domain.Tile;
+using BattleshipGame.Domain.Factories;
 
-namespace BattleshipGame.Domain.Domain
+namespace BattleshipGame.Domain.Domain.Matrix
 {
-    public class Matrix
+    public class TileMatrix
     {
+        public OwnerTypeEnum OwnerType { get; }
+        
         public int SizeX { get; }
         public int SizeY { get; }
 
-        private List<GameTile> _gameTiles = new List<GameTile>();
+        private List<ITile> _gameTiles = new List<ITile>();
         
-        internal Matrix(int sizeX, int sizeY)
+        internal TileMatrix(int sizeX, int sizeY, OwnerTypeEnum ownerTypeEnum ,ITileFactory tileFactory)
         {
+            OwnerType = ownerTypeEnum;
             SizeX = sizeX;
             SizeY = sizeY;
-            Fill();
+            Fill(tileFactory);
         }
 
-        private void Fill()
+        private void Fill(ITileFactory tileFactory)
         {
             for (int x = 0; x < SizeX; x++)
             {
                 for (int y = 0; y < SizeY; y++)
                 {
-                    _gameTiles.Add(new GameTile(new Coordinate(x,y)));
+                    _gameTiles.Add(tileFactory.Create(new Coordinate(x,y), OwnerType));
                 }
             }
         }
@@ -37,7 +41,7 @@ namespace BattleshipGame.Domain.Domain
             });
         }
 
-        public GameTile GetTile(Coordinate coordinate)
+        public ITile GetTile(Coordinate coordinate)
         {
             return _gameTiles.FirstOrDefault(x => x.Coordinate.X == coordinate.X && x.Coordinate.Y == coordinate.Y);
         }

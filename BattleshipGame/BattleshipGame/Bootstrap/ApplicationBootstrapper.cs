@@ -1,3 +1,4 @@
+using Autofac;
 using BattleshipGame.Application;
 
 namespace BattleshipGame.Android.Bootstrap
@@ -6,7 +7,7 @@ namespace BattleshipGame.Android.Bootstrap
     {
         public static void Bootstrap()
         {
-            App.RegisterType<IAppManager, AppManager>();
+            App.RegisterTypeAsSingleton<IAppManager, AppManager>();
         }
     }
 }

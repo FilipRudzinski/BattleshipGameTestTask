@@ -22,11 +22,11 @@ namespace BattleshipGame.Android.View
             set => _viewModel.CoordY = value;
         }
 
-        public MatrixTypeEnum MatrixTypeEnum
+        public OwnerTypeEnum OwnerTypeEnum
         {
             //TODO: Move binding to xaml
-            get => _viewModel.MatrixType;
-            set => _viewModel.MatrixType = value;
+            get => _viewModel.OwnerType;
+            set => _viewModel.OwnerType = value;
         }
         private BattleTileViewModel _viewModel;
         
@@ -35,6 +35,11 @@ namespace BattleshipGame.Android.View
             InitializeComponent();
             _viewModel = App.Resolve<BattleTileViewModel>();
             this.BindingContext = _viewModel;
+        }
+
+        public void Initialize()
+        {
+            _viewModel.Initialize();
         }
     }
 }

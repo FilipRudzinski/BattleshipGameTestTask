@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using BattleshipGame.Domain.Domain;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -8,11 +9,16 @@ namespace BattleshipGame.Android.View
 {
     public partial class ShipGrid : ContentView
     {
-        public MatrixTypeEnum MatrixTypeEnum { get; set; }
-        
+        public OwnerTypeEnum OwnerTypeEnum { get; set; }
+
         public ShipGrid()
         {
             InitializeComponent();
+        }
+
+        protected override void OnParentSet()
+        {
+            base.OnParentSet();
             InitializeGrid();
         }
 
@@ -37,10 +43,11 @@ namespace BattleshipGame.Android.View
             {
                 if (x is Tile tile)
                 {
-                    counter++;
                     tile.CoordX = counter;
                     tile.CoordY = column;
-                    tile.MatrixTypeEnum = MatrixTypeEnum;
+                    tile.OwnerTypeEnum = OwnerTypeEnum;
+                    tile.Initialize();
+                    counter++;
                 }
             });
         }

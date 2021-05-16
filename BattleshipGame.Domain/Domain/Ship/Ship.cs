@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using BattleshipGame.Domain.Domain.Tile;
 
-namespace BattleshipGame.Domain.Domain
+namespace BattleshipGame.Domain.Domain.Ship
 {
     public class Ship
     {
@@ -14,14 +15,14 @@ namespace BattleshipGame.Domain.Domain
             ShipType = shipTypeEnum;
         }
 
-        public List<GameTile> Tiles { get; } = new List<GameTile>();
+        public List<PlayerTile> Tiles { get; } = new List<PlayerTile>();
 
         public int FieldsCount => GetShipFieldCount();
 
-        public void AssignTile(GameTile gameTile)
+        public void AssignTile(PlayerTile playerTile)
         {
             if (Tiles.Count > FieldsCount ) throw new Exception("Ship tiles exceeded");
-            Tiles.Add(gameTile);
+            Tiles.Add(playerTile);
         }
         
         int GetShipFieldCount()

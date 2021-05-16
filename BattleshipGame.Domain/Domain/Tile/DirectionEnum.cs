@@ -1,6 +1,4 @@
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-
-namespace BattleshipGame.Domain.Domain
+namespace BattleshipGame.Domain.Domain.Tile
 {
     public enum DirectionEnum
     {

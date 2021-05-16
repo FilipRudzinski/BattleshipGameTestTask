@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Globalization;
 using BattleshipGame.Domain.Domain;
+using BattleshipGame.Domain.Domain.Tile;
 using Xamarin.Forms;
 using Color = Xamarin.Forms.Color;
 
@@ -21,6 +22,8 @@ namespace BattleshipGame.Android.Conventers
                     return Color.Navy;
                 case TileState.ShootShip:
                     return Color.Red;
+                case TileState.Ship:
+                    return Color.Green;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

@@ -1,6 +1,6 @@
 namespace BattleshipGame.Domain.Domain
 {
-    public enum MatrixTypeEnum
+    public enum OwnerTypeEnum
     {
         Player,
         Enemy

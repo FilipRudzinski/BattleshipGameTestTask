@@ -2,6 +2,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using BattleshipGame.Application.Requests;
 using BattleshipGame.Domain.Domain;
+using BattleshipGame.Domain.Domain.Tile;
 using MediatR;
 
 namespace BattleshipGame.Application.Handlers
@@ -17,7 +18,7 @@ namespace BattleshipGame.Application.Handlers
         
         public async Task Handle(TileClickRequest notification, CancellationToken cancellationToken)
         {
-            _appManager.TileClicked(new Coordinate(notification.CoordX,notification.CoordY), notification.MatrixType);
+            _appManager.TileClicked(new Coordinate(notification.CoordX,notification.CoordY), notification.OwnerType);
         }
     }
 }

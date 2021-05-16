@@ -1,4 +1,4 @@
-namespace BattleshipGame.Domain.Domain
+namespace BattleshipGame.Domain.Domain.Ship
 {
     public enum ShipTypeEnum
     {

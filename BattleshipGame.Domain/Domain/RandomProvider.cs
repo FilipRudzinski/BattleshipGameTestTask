@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using BattleshipGame.Domain.Domain.Tile;
 
 namespace BattleshipGame.Domain.Domain
 {
@@ -28,14 +29,14 @@ namespace BattleshipGame.Domain.Domain
         }
 
         [Pure]
-        public Coordinate GetRandomAdject(Coordinate coordinate, Matrix matrix)
+        public Coordinate GetRandomAdject(Coordinate coordinate, Matrix.TileMatrix tileMatrix)
         {
             var adject = coordinate.GetAdject().ToList();
             do
             {
                 var random = GetRandom(adject.Count);
                 var randomCoord = adject[random];
-                var tile = matrix.GetTile(randomCoord);
+                var tile = tileMatrix.GetTile(randomCoord);
                 if (tile != null)
                 {
                     return randomCoord;
@@ -50,14 +51,14 @@ namespace BattleshipGame.Domain.Domain
         }
         
         [Pure]
-        public Coordinate GetRandomEmptyAdject(Coordinate coordinate, Matrix matrix)
+        public Coordinate GetRandomEmptyAdject(Coordinate coordinate, Matrix.TileMatrix tileMatrix)
         {
             var adject = coordinate.GetAdject().ToList();
             do
             {
                 var random = GetRandom(adject.Count);
                 var randomCoord = adject[random];
-                var tile = matrix.GetTile(randomCoord);
+                var tile = (PlayerTile)tileMatrix.GetTile(randomCoord);
                 if (tile != null && !tile.IsShip)
                 {
                     return randomCoord;

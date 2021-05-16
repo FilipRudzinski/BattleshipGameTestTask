@@ -1,4 +1,7 @@
 using BattleshipGame.Domain.Domain;
+using BattleshipGame.Domain.Domain.Ship;
+using BattleshipGame.Domain.Domain.Tile;
+using BattleshipGame.Domain.Factories;
 using NUnit.Framework;
 
 namespace BattleshipGame.UnitTest.Domain
@@ -10,7 +13,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void CreationTest()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0,0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             //act
             //assert
             Assert.IsFalse(gameTile.IsShip); 
@@ -24,7 +28,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void ShipAssigment()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0,0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             var ship = new Ship(ShipTypeEnum.Battleship);
             //act
             gameTile.AssignShip(ship);
@@ -40,7 +45,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void ShotOnEmptyTest()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0,0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             //act
             gameTile.Shoot();
             //assert
@@ -55,8 +61,9 @@ namespace BattleshipGame.UnitTest.Domain
         public void ShotOnShip()
         {
             //arrange
-            var gameTile1 = new GameTile(new Coordinate(0,0));
-            var gameTile2 = new GameTile(new Coordinate(0,1));
+            var tileFactory = new TileFactory();
+            var gameTile1 = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
+            var gameTile2 = tileFactory.Create(new Coordinate(0, 1), OwnerTypeEnum.Player) as PlayerTile;
             var ship = new Ship(ShipTypeEnum.Battleship);
             //act
             gameTile1.AssignShip(ship);
@@ -76,7 +83,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void ClickTestEmptyField()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0, 0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             //act
             gameTile.Click();
             //assert
@@ -87,7 +95,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void DoubleClickTestEmptyField()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0, 0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             //act
             gameTile.Click();
             gameTile.Click();
@@ -99,7 +108,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void TripleClickTestEmptyField()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0, 0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             //act
             gameTile.Click();
             gameTile.Click();
@@ -112,7 +122,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void QuadClickTestEmptyField()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0, 0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             //act
             gameTile.Click();
             gameTile.Click();
@@ -126,7 +137,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void SingleClickTestWithShip()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0, 0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             var ship = new Ship(ShipTypeEnum.Submarine);
             gameTile.AssignShip(ship);
             //act
@@ -140,7 +152,8 @@ namespace BattleshipGame.UnitTest.Domain
         public void DoubleClickTestWithShip()
         {
             //arrange
-            var gameTile = new GameTile(new Coordinate(0, 0));
+            var tileFactory = new TileFactory();
+            var gameTile = tileFactory.Create(new Coordinate(0, 0), OwnerTypeEnum.Player) as PlayerTile;
             var ship = new Ship(ShipTypeEnum.Submarine);
             gameTile.AssignShip(ship);
             //act

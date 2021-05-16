@@ -1,4 +1,7 @@
 using BattleshipGame.Domain.Domain;
+using BattleshipGame.Domain.Domain.Ship;
+using BattleshipGame.Domain.Domain.Tile;
+using BattleshipGame.Domain.Factories;
 using NUnit.Framework;
 
 namespace BattleshipGame.UnitTest.Domain
@@ -13,7 +16,7 @@ namespace BattleshipGame.UnitTest.Domain
             var ship = new Ship(shipType);
             //act
             //Assert
-            Assert.AreEqual(ship.ShipType,shipType);
+            Assert.AreEqual(ship.ShipType, shipType);
             Assert.False(ship.IsDestroyed);
         }
 
@@ -23,11 +26,12 @@ namespace BattleshipGame.UnitTest.Domain
             //arrange
             var shipType = ShipTypeEnum.Battleship;
             var ship = new Ship(shipType);
-            var tile1 = new GameTile(new Coordinate(0,1));
-            var tile2 = new GameTile(new Coordinate(0,2));
-            var tile3 = new GameTile(new Coordinate(0,3));
-            var tile4 = new GameTile(new Coordinate(0,4));
-            var tile5 = new GameTile(new Coordinate(0,5));
+            var tileFactory = new TileFactory();
+            var tile1 = tileFactory.Create(new Coordinate(0, 1), OwnerTypeEnum.Player) as PlayerTile;
+            var tile2 = tileFactory.Create(new Coordinate(0, 2), OwnerTypeEnum.Player) as PlayerTile;
+            var tile3 = tileFactory.Create(new Coordinate(0, 3), OwnerTypeEnum.Player) as PlayerTile;
+            var tile4 = tileFactory.Create(new Coordinate(0, 4), OwnerTypeEnum.Player) as PlayerTile;
+            var tile5 = tileFactory.Create(new Coordinate(0, 5), OwnerTypeEnum.Player) as PlayerTile;
             //act
             tile1.AssignShip(ship);
             tile2.AssignShip(ship);

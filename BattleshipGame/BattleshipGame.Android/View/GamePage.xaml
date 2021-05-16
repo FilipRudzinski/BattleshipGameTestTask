@@ -18,8 +18,8 @@
             </Grid.ColumnDefinitions>
             <Label HorizontalOptions="Center" FontSize="Title">Battleship Game</Label>
             <Button Grid.Row="1" WidthRequest="100" HorizontalOptions="Center" Text="Restart" Command="{Binding ResetCommand}"></Button>
-            <view:ShipGrid Grid.Row="2" MatrixTypeEnum="Enemy"  VerticalOptions="Start" HorizontalOptions="Center"/>
-            <view:ShipGrid Grid.Row="3" MatrixTypeEnum="Player"  VerticalOptions="Start" HorizontalOptions="Center"/>
+            <view:ShipGrid Grid.Row="2" OwnerTypeEnum="Enemy"  VerticalOptions="Start" HorizontalOptions="Center"/>
+            <view:ShipGrid Grid.Row="3" OwnerTypeEnum="Player"  VerticalOptions="Start" HorizontalOptions="Center"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

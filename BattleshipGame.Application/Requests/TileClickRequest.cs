@@ -7,13 +7,13 @@ namespace BattleshipGame.Application.Requests
     {
         public int CoordX { get; }
         public int CoordY { get; }
-        public MatrixTypeEnum MatrixType { get; }
+        public OwnerTypeEnum OwnerType { get; }
         
-        public TileClickRequest(int x, int y, MatrixTypeEnum matrixType)
+        public TileClickRequest(int x, int y, OwnerTypeEnum ownerType)
         {
             CoordX = x;
             CoordY = y;
-            MatrixType = matrixType;
+            OwnerType = ownerType;
         }
     }
 }

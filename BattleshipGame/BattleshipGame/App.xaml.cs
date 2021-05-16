@@ -49,11 +49,14 @@ namespace BattleshipGame.Android
             builder.RegisterType<T>();
         }
         
-        
-
         public static void RegisterType<TInterface, T>() where TInterface : class where T : class, TInterface
         {
             builder.RegisterType<T>().As<TInterface>();
+        }
+        
+        public static void RegisterTypeAsSingleton<TInterface, T>() where TInterface : class where T : class, TInterface
+        {
+            builder.RegisterType<T>().As<TInterface>().SingleInstance();;
         }
 
         public static void RegisterTypeWithParameters<T>(Type param1Type, object param1Value, Type param2Type, string param2Name) where T : class

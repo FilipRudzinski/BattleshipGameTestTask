@@ -12,7 +12,7 @@ namespace BattleshipGame.Application.ViewModels
     [Obsolete]
     public class PlayerMatrixViewModel : INotifyPropertyChanged
     {
-        public MatrixTypeEnum MatrixType { get; }
+        public OwnerTypeEnum OwnerType { get; }
         
         private readonly IMediator _mediator;
         public PlayerMatrixViewModel(IMediator mediator)

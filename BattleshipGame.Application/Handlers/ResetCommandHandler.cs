@@ -9,15 +9,14 @@ namespace BattleshipGame.Application.Handlers
     {
         private IAppManager _appManager;
         
-        public ResetCommandHandler(IAppManager _appManager)
+        public ResetCommandHandler(IAppManager appManager)
         {
-            _appManager = _appManager;
+            _appManager = appManager;
         }
         
         public async Task Handle(ResetRequest notification, CancellationToken cancellationToken)
         {
             _appManager.ResetGame();
-            //return Task.FromResult();
         }
     }
 }

@@ -109,6 +109,10 @@
         <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\..\BattleshipGame.Application\BattleshipGame.Application.csproj">
+        <Project>{4a22b1ac-26eb-4e85-ab47-f4da96f7b30c}</Project>
+        <Name>BattleshipGame.Application</Name>
+      </ProjectReference>
       <ProjectReference Include="..\..\BattleshipGame.Domain\BattleshipGame.Domain.csproj">
         <Project>{57c7513d-c5be-4660-a048-33ffdc0fc27a}</Project>
         <Name>BattleshipGame.Domain</Name>

@@ -1,4 +1,5 @@
 using BattleshipGame.Domain.Domain;
+using BattleshipGame.Domain.Domain.Tile;
 using BattleshipGame.Domain.Factories;
 using NUnit.Framework;
 using Xamarin.UITest;
@@ -10,11 +11,11 @@ namespace BattleshipGame.UnitTest.Domain
         [Test]
         public void MatrixCreationTest()
         {
-            var matrixFactory = new MatrixFactory();
             //arrange
             var size = 10;
-            var matrix = matrixFactory.Create(size, size);
-
+            var matrixFactory = new MatrixFactory();
+            var tileFactory = new TileFactory();
+            var matrix = matrixFactory.Create(size, size, OwnerTypeEnum.Enemy,tileFactory);
             //act 
 
             //assert
@@ -26,10 +27,12 @@ namespace BattleshipGame.UnitTest.Domain
         [Test]
         public void MatrixFieldTest()
         {
-            var matrixFactory = new MatrixFactory();
+            
             //arrange
             var size = 10;
-            var matrix = matrixFactory.Create(size, size);
+            var matrixFactory = new MatrixFactory();
+            var tileFactory = new TileFactory();
+            var matrix = matrixFactory.Create(size, size, OwnerTypeEnum.Enemy,tileFactory);
 
             //act 
             var coordX = 2;

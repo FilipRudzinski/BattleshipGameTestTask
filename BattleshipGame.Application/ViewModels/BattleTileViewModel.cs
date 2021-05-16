@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using BattleshipGame.Application.Requests;
 using BattleshipGame.Domain.Domain;
+using BattleshipGame.Domain.Domain.Tile;
 using MediatR;
 using Xamarin.Forms;
 
@@ -19,7 +20,7 @@ namespace BattleshipGame.Application.ViewModels
         public int CoordX { get; set; }
         public int CoordY { get; set; }
 
-        public MatrixTypeEnum MatrixType { get; set; }
+        public OwnerTypeEnum OwnerType { get; set; }
         
         public event PropertyChangedEventHandler PropertyChanged;
         private readonly IMediator _mediator;
@@ -31,19 +32,18 @@ namespace BattleshipGame.Application.ViewModels
         {
             _mediator = mediator;
             _appManager = appManager;
-            appManager.GameInitialized += AppManagerOnGameInitialized;
-
             ClickCommand = new Command(() =>
             {
-                _mediator.Publish(new TileClickRequest(CoordX,CoordY,MatrixType));
+                _mediator.Publish(new TileClickRequest(CoordX,CoordY,OwnerType));
             });
         }
 
-        private void AppManagerOnGameInitialized()
+        public void Initialize()
         {
-            var gameTile = _appManager.GetTile(CoordX, CoordY, MatrixType);
+            var gameTile = _appManager.GetTile(CoordX, CoordY, OwnerType);
             gameTile.StateChanged += GameTileOnStateChanged;
         }
+        
 
         private void GameTileOnStateChanged(TileState tileState)
         {

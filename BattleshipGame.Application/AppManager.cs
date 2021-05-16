@@ -1,5 +1,8 @@
 using System;
 using BattleshipGame.Domain.Domain;
+using BattleshipGame.Domain.Domain.Core;
+using BattleshipGame.Domain.Domain.Ship;
+using BattleshipGame.Domain.Domain.Tile;
 using BattleshipGame.Domain.Factories;
 
 namespace BattleshipGame.Application
@@ -8,22 +11,24 @@ namespace BattleshipGame.Application
     {
         private Battle _battle;
         private IMatrixFactory _matrixFactory;
+        private ITileFactory _tileFactory;
 
         public event Action GameInitialized;
 
-        public AppManager(IMatrixFactory matrixFactory)
+        public AppManager(IMatrixFactory matrixFactory, ITileFactory tileFactory)
         {
             _matrixFactory = matrixFactory;
+            _tileFactory = tileFactory;
             Initialize();
         }
 
         void Initialize()
         {
             var gameRules = new GameRules();
-            _battle = new Battle(_matrixFactory.Create(gameRules.MapSize, gameRules.MapSize),
-                _matrixFactory.Create(gameRules.MapSize, gameRules.MapSize),
+            _battle = new Battle(_matrixFactory.Create(gameRules.MapSize, gameRules.MapSize, OwnerTypeEnum.Player,_tileFactory ),
+                _matrixFactory.Create(gameRules.MapSize, gameRules.MapSize, OwnerTypeEnum.Enemy, _tileFactory),
                 new ShipRandomFiller(new RandomProvider()));
-            
+
             GameInitialized?.Invoke();
         }
 
@@ -32,14 +37,14 @@ namespace BattleshipGame.Application
             _battle.Reset();
         }
 
-        public void TileClicked(Coordinate coordinate, MatrixTypeEnum matrixType)
+        public void TileClicked(Coordinate coordinate, OwnerTypeEnum ownerType)
         {
-            _battle.TileClicked(coordinate, matrixType);
+            _battle.TileClicked(coordinate, ownerType);
         }
 
-        public GameTile GetTile(int coordX, int coordY, MatrixTypeEnum matrixType)
+        public ITile GetTile(int coordX, int coordY, OwnerTypeEnum ownerType)
         {
-            return _battle.GetTile(new Coordinate(coordX, coordY), matrixType);
+            return _battle.GetTile(new Coordinate(coordX, coordY), ownerType);
         }
     }
 
@@ -48,8 +53,8 @@ namespace BattleshipGame.Application
         event Action GameInitialized;
         void ResetGame();
 
-        void TileClicked(Coordinate coordinate, MatrixTypeEnum matrixType);
+        void TileClicked(Coordinate coordinate, OwnerTypeEnum ownerType);
 
-        GameTile GetTile(int coordX, int coordY, MatrixTypeEnum matrixType);
+        ITile GetTile(int coordX, int coordY, OwnerTypeEnum ownerType);
     }
 }
