@@ -14,7 +14,7 @@ namespace BattleshipGame.Application.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
         
-        public ICommand ResetCommand { protected set; get; }
+        public ICommand ResetCommand { get; }
 
         public BattleshipGameViewModel(IMediator mediator)
         {

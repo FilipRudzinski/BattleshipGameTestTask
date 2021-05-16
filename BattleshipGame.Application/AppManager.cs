@@ -12,8 +12,7 @@ namespace BattleshipGame.Application
         private Battle _battle;
         private IMatrixFactory _matrixFactory;
         private ITileFactory _tileFactory;
-
-        public event Action GameInitialized;
+        
 
         public AppManager(IMatrixFactory matrixFactory, ITileFactory tileFactory)
         {
@@ -28,8 +27,7 @@ namespace BattleshipGame.Application
             _battle = new Battle(_matrixFactory.Create(gameRules.MapSize, gameRules.MapSize, OwnerTypeEnum.Player,_tileFactory ),
                 _matrixFactory.Create(gameRules.MapSize, gameRules.MapSize, OwnerTypeEnum.Enemy, _tileFactory),
                 new ShipRandomFiller(new RandomProvider()));
-
-            GameInitialized?.Invoke();
+            
         }
 
         public void ResetGame()
@@ -50,7 +48,6 @@ namespace BattleshipGame.Application
 
     public interface IAppManager
     {
-        event Action GameInitialized;
         void ResetGame();
 
         void TileClicked(Coordinate coordinate, OwnerTypeEnum ownerType);
