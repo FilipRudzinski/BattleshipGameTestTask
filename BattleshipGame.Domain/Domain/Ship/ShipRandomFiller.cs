@@ -15,40 +15,57 @@ namespace BattleshipGame.Domain.Domain.Ship
         {
             _provider = provider;
         }
-
-        public void FillShips(Matrix.TileMatrix tileMatrix, IEnumerable<Ship> ships)
+        
+        public void FillShips(TileMatrix tileMatrix, IEnumerable<Ship> ships)
         {
-            List<Coordinate> shipCoords = null;
-            for (int i = 0; i < 100; i++)
-            {
-                ships.ForEach(x => { shipCoords = FillShip(tileMatrix, x); });
-            }
-
-            if (shipCoords == null) throw new Exception("Error! Cannot fill Ships");
+            TryFillShips(tileMatrix,ships);
         }
 
-        List<Coordinate> FillShip(Matrix.TileMatrix tileMatrix, Ship ship)
+        void TryFillShips(TileMatrix tileMatrix, IEnumerable<Ship> ships)
         {
             for (int i = 0; i < 100; i++)
             {
-                var shipCoords = TryFillShip(tileMatrix, ship);
-                if (shipCoords != null)
+                try
                 {
-                    return shipCoords;
+                    ships.ForEach(x =>
+                    { 
+                        TryFillShip(tileMatrix, x);
+                    });
+                    if(ships.All(x => x.IsAssigned)) return;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
                 }
             }
-            return null;
+        }
+
+        void TryFillShip(TileMatrix tileMatrix, Ship ship)
+        {
+            for (int i = 0; i < 1000; i++)
+            {
+                try
+                {
+                    FillShip(tileMatrix, ship);
+                    return;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
+            throw new Exception("Cannot Fill Ship");
         }
         
-        List<Coordinate> TryFillShip(TileMatrix tileMatrix, Ship ship)
+        void FillShip(TileMatrix tileMatrix, Ship ship)
         {
             var shipCoords = new List<Coordinate>();
             var initial = _provider.GetRandomCoord(tileMatrix.SizeX);
             shipCoords.Add(initial);
-            var tile = (PlayerTile)tileMatrix.GetTile(initial);
-            if (tile.IsShip)
+            if (CheckTileIsCollidingWithOther(initial, tileMatrix))
             {
-                return null;
+                //TODO: Business exception
+                throw new Exception("Cannot Fill Ship");
             }
 
             var direction = Helper.RandomEnumValue<DirectionEnum>();
@@ -58,16 +75,18 @@ namespace BattleshipGame.Domain.Domain.Ship
                 var coordinate = TryAddField(tileMatrix, ship, lastCoord,direction);
                 shipCoords.Add(coordinate);
                 lastCoord = coordinate;
-                if (coordinate == null) return null;
             }
 
             MarkTiles(shipCoords, tileMatrix, ship);
-            return shipCoords;
         }
 
-        void CheckTileIsCollidingWithOther(Coordinate coordinate, )
+        public bool CheckTileIsCollidingWithOther(Coordinate coordinate, TileMatrix tileMatrix)
         {
-            
+            var tile = (PlayerTile)tileMatrix.GetTile(coordinate);
+            if (tile.IsShip) return true;
+            var adject = tile.Coordinate.GetAdject();
+            var isAdjectTileOccupied = adject.Select(x => (PlayerTile)tileMatrix.GetTile(x)).Any(x => x?.IsShip == true);
+            return isAdjectTileOccupied;
         }
 
         void MarkTiles(IEnumerable<Coordinate> coordinates, Matrix.TileMatrix tileMatrix, Ship ship)
@@ -79,7 +98,7 @@ namespace BattleshipGame.Domain.Domain.Ship
             });
         }
 
-        Coordinate TryAddField(Matrix.TileMatrix tileMatrix, Ship ship, Coordinate last, DirectionEnum directionEnum)
+        Coordinate TryAddField(TileMatrix tileMatrix, Ship ship, Coordinate last, DirectionEnum directionEnum)
         {
             Coordinate nextCoord = null; 
             switch (directionEnum)
@@ -97,14 +116,10 @@ namespace BattleshipGame.Domain.Domain.Ship
                     nextCoord = last.RightCoord;
                     break;
             }
-            var nextTile = (PlayerTile)tileMatrix.GetTile(nextCoord);
-            if (nextTile != null && !nextTile.IsShip)
-            {
-                var adject = nextTile.Coordinate.GetAdject();
-                var isAdjectShip = adject.Select(x => (PlayerTile)tileMatrix.GetTile(x)).Any(x => x?.IsShip == true);
-                if (!isAdjectShip) return nextCoord;
-            }
-            return null;
+
+            var isColliding = CheckTileIsCollidingWithOther(nextCoord, tileMatrix);
+            if (isColliding) throw new Exception("Tile is Colliding");
+            return nextCoord;
         }
     }
 }

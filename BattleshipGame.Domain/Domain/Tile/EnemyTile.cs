@@ -33,6 +33,12 @@ namespace BattleshipGame.Domain.Domain.Tile
                     throw new ArgumentOutOfRangeException();
             }
         }
-        
+
+
+        public override void Clear()
+        {
+            _tileState = TileState.Empty;
+            FireStateChanged();
+        }
     }
 }

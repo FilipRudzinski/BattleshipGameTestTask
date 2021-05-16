@@ -24,7 +24,9 @@ namespace BattleshipGame.Domain.Domain.Ship
             if (Tiles.Count > FieldsCount ) throw new Exception("Ship tiles exceeded");
             Tiles.Add(playerTile);
         }
-        
+
+        public bool IsAssigned => Tiles.Count == FieldsCount;
+
         int GetShipFieldCount()
         {
             switch (ShipType)
